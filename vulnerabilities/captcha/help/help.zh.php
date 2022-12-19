@@ -5,11 +5,10 @@
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
-		<h3>关于</h3>
-		<p>A <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', 'CAPTCHA' ); ?> is a program that can tell whether its user is a human or a computer. You've probably seen
-			them - colourful images with distorted text at the bottom of Web registration forms. CAPTCHAs are used by many websites to prevent abuse from
-			"bots", or automated programs usually written to generate spam. No computer program can read distorted text as well as humans can, so bots
-			cannot navigate sites protected by CAPTCHAs.</p>
+		<h3>简介</h3>
+		<p><?php echo dvwaExternalLinkUrlGet( 'https://zh.wikipedia.org/wiki/验证码', '验证码' ); ?> 是一种区分用户是机器还是人类的程序。
+		你可能已经看到了它--在网页注册表格的下面有彩色的图像或扭曲的文字。验证码被许多网站用来防止“机器人”滥用，或通常为产生垃圾邮件而编写的自动化程序。
+		没有计算机程序能像人类一样读懂扭曲的文本，所以机器人不能浏览受验证码保护的网站。</p>
 
 		<p>CAPTCHAs are often used to protect sensitive functionality from automated bots. Such functionality typically includes user registration and changes,
 			password changes, and posting content. In this example, the CAPTCHA is guarding the change password functionality for the user account. This provides

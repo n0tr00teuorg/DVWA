@@ -5,7 +5,7 @@
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
-		<h3>关于</h3>
+		<h3>简介</h3>
 		<p>密码破解是指从存储在计算机系统中或由计算机系统传输的数据中恢复密码的过程。
 		一种常见的方法是反复尝试猜测密码。</p>
 

@@ -25,7 +25,7 @@
 		<h3>低级别</h3>
 		<p>There are no measures in place to protect against this attack. This means a link can be crafted to achieve a certain action (in this case, change the current users password).
 			Then with some basic social engineering, have the target click the link (or just visit a certain page), to trigger the action.</p>
-		<pre>Spoiler: <span class="spoiler">?password_new=password&password_conf=password&Change=Change</span>.</pre>
+		<pre>剧透：<span class="spoiler">?password_new=password&password_conf=password&Change=Change</span>.</pre>
 
 		<br />
 
@@ -38,7 +38,7 @@
 
 		<h3>高级别</h3>
 		<p>In the high level, the developer has added an "anti Cross-Site Request Forgery (CSRF) token". In order by bypass this protection method, another vulnerability will be required.</p>
-		<pre>Spoiler: <span class="spoiler">e.g. Javascript is a executed on the client side, in the browser</span>.</pre>
+		<pre>剧透：<span class="spoiler">e.g. Javascript is a executed on the client side, in the browser</span>.</pre>
 
 		<h4>Bonus Challenge</h4>
 		<p>At this level, the site will also accept a change password request as a JSON object in the following format:</p>

@@ -26,19 +26,19 @@
 
 		<h3>低级别</h3>
 		<p>Low level will not check the requested input, before including it to be used in the output text.</p>
-		<pre>Spoiler: <span class="spoiler">?name=&lt;script&gt;alert("XSS");&lt;/script&gt;</span>.</pre>
+		<pre>剧透：<span class="spoiler">?name=&lt;script&gt;alert("XSS");&lt;/script&gt;</span>.</pre>
 
 		<br />
 
 		<h3>中级别</h3>
 		<p>The developer has tried to add a simple pattern matching to remove any references to "&lt;script&gt;", to disable any JavaScript.</p>
-		<pre>Spoiler: <span class="spoiler">Its cAse sENSiTiVE</span>.</pre>
+		<pre>剧透：<span class="spoiler">Its cAse sENSiTiVE</span>.</pre>
 
 		<br />
 
 		<h3>高级别</h3>
 		<p>The developer now believes they can disable all JavaScript by removing the pattern "&lt;s*c*r*i*p*t".</p>
-		<pre>Spoiler: <span class="spoiler">HTML events</span>.</pre>
+		<pre>剧透：<span class="spoiler">HTML events</span>.</pre>
 
 		<br />
 

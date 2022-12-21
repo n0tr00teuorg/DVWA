@@ -25,23 +25,23 @@
 		通过直接向更改页面提交新密码，用户可以绕过验证码系统。</p>
 
 		<p>The parameters required to complete this challenge in low security would be similar to the following:</p>
-		<pre>Spoiler: <span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>.</pre>
+		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>.</pre>
 
 		<br />
 
 		<h3>中级别</h3>
 		<p>The developer has attempted to place state around the session and keep track of whether the user successfully completed the
-			CAPTCHA prior to submitting data. Because the state variable (Spoiler: <span class="spoiler">passed_captcha</span>) is on the client side,
+			CAPTCHA prior to submitting data. Because the state variable (剧透：<span class="spoiler">passed_captcha</span>) is on the client side,
 			it can also be manipulated by the attacker like so:</p>
-		<pre>Spoiler: <span class="spoiler">?step=2&password_new=password&password_conf=password&passed_captcha=true&Change=Change</span>.</pre>
+		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&passed_captcha=true&Change=Change</span>.</pre>
 
 		<br />
 
 		<h3>高级别</h3>
 		<p>There has been development code left in, which was never removed in production. It is possible to mimic the development values, to allow
 			invalid values in be placed into the CAPTCHA field.</p>
-		<p>You will need to spoof your user-agent (Spoiler: <span class="spoiler">reCAPTCHA</span>) as well as use the CAPTCHA value of
-			(Spoiler: <span class="spoiler">hidd3n_valu3</span>) to skip the check.</p>
+		<p>You will need to spoof your user-agent (剧透：<span class="spoiler">reCAPTCHA</span>) as well as use the CAPTCHA value of
+			(剧透：<span class="spoiler">hidd3n_valu3</span>) to skip the check.</p>
 
 		<br />
 

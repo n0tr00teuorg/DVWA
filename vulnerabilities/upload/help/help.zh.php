@@ -22,19 +22,19 @@
 
 		<h3>低级别</h3>
 		<p>Low level will not check the contents of the file being uploaded in any way. It relies only on trust.</p>
-		<pre>Spoiler: <span class="spoiler">Upload any valid PHP file with command in it</span>.</pre>
+		<pre>剧透：<span class="spoiler">Upload any valid PHP file with command in it</span>.</pre>
 
 		<br />
 
 		<h3>中级别</h3>
 		<p>When using the medium level, it will check the reported file type from the client when its being uploaded.</p>
-		<pre>Spoiler: <span class="spoiler">Worth looking for any restrictions within any "hidden" form fields</span>.</pre>
+		<pre>剧透：<span class="spoiler">Worth looking for any restrictions within any "hidden" form fields</span>.</pre>
 
 		<br />
 
 		<h3>高级别</h3>
 		<p>Once the file has been received from the client, the server will try to resize any image that was included in the request.</p>
-		<pre>Spoiler: <span class="spoiler">need to link in another vulnerability, such as file inclusion</span>.</pre>
+		<pre>剧透：<span class="spoiler">need to link in another vulnerability, such as file inclusion</span>.</pre>
 
 		<br />
 

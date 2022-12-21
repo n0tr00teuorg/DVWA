@@ -1,5 +1,5 @@
 <div class="body_padded">
-	<h1>帮助 - 不安全的验证码</h1>
+	<h1>帮助 - 不安全的验证流程</h1>
 
 	<div id="code">
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
@@ -10,20 +10,19 @@
 		你可能已经看到了它--在网页注册表格的下面有彩色的图像或扭曲的文字。验证码被许多网站用来防止“机器人”滥用，或通常为产生垃圾邮件而编写的自动化程序。
 		没有计算机程序能像人类一样读懂扭曲的文本，所以机器人不能浏览受验证码保护的网站。</p>
 
-		<p>CAPTCHAs are often used to protect sensitive functionality from automated bots. Such functionality typically includes user registration and changes,
-			password changes, and posting content. In this example, the CAPTCHA is guarding the change password functionality for the user account. This provides
-			limited protection from CSRF attacks as well as automated bot guessing.</p>
+		<p>验证码经常被用来保护敏感功能不受自动机器人的影响。敏感功能通常包括账户注册、更改信息、更改密码和发布内容。
+		在本例中，验证码保护用户帐户的更改密码功能，这对CSRF和爆破等攻击提供了有限的保护。</p>
 
 		<br /><hr /><br />
 
 		<h3>目标</h3>
-		<p>你的目标，由于验证码系统不完善，以自动化的方式改变当前用户的密码。</p>
+		<p>你的目标，由于验证流程不完善，以自动化的方式改变当前用户的密码。</p>
 
 		<br /><hr /><br />
 
 		<h3>低级别</h3>
-		<p>The issue with this CAPTCHA is that it is easily bypassed. The developer has made the assumption that all users will progress through screen 1, complete the CAPTCHA, and then
-			move on to the next screen where the password is actually updated. By submitting the new password directly to the change page, the user may bypass the CAPTCHA system.</p>
+		<p>这个验证码的问题是，它很容易被绕过。开发者假设所有的用户都会通过第一个页面输入验证码，然后进入下一个用于更新密码的页面。
+		通过直接向更改页面提交新密码，用户可以绕过验证码系统。</p>
 
 		<p>The parameters required to complete this challenge in low security would be similar to the following:</p>
 		<pre>Spoiler: <span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>.</pre>
@@ -57,5 +56,5 @@
 
 	<br />
 
-	<p>参考：<?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA' ); ?></p>
+	<p>参考：<?php echo dvwaExternalLinkUrlGet( 'https://zh.wikipedia.org/wiki/验证码' ); ?></p>
 </div>

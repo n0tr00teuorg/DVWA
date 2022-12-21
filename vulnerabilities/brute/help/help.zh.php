@@ -44,7 +44,7 @@
 		这个级别也是在中级别上的延伸，在登录失败时等待，但这次是在2到4秒之间的随机时间。
 		这样做的是试图混淆任何时间预测。</p>
 
-		<p>使用<?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', '验证码' ); ?>来获取和反跨站请求伪造相同的效果。</p>
+		<p>使用<?php echo dvwaExternalLinkUrlGet( 'https://zh.wikipedia.org/wiki/验证码', '验证码' ); ?>来获取和反跨站请求伪造相同的效果。</p>
 
 		<br />
 

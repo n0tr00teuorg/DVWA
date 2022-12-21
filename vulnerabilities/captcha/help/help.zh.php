@@ -24,24 +24,21 @@
 		<p>这个验证码的问题是，它很容易被绕过。开发者假设所有的用户都会通过第一个页面输入验证码，然后进入下一个用于更新密码的页面。
 		通过直接向更改页面提交新密码，用户可以绕过验证码系统。</p>
 
-		<p>The parameters required to complete this challenge in low security would be similar to the following:</p>
-		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>.</pre>
+		<p>在低级别下，完成这一挑战所需的参数将类似于以下内容：</p>
+		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>。</pre>
 
 		<br />
 
 		<h3>中级别</h3>
-		<p>The developer has attempted to place state around the session and keep track of whether the user successfully completed the
-			CAPTCHA prior to submitting data. Because the state variable (剧透：<span class="spoiler">passed_captcha</span>) is on the client side,
-			it can also be manipulated by the attacker like so:</p>
-		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&passed_captcha=true&Change=Change</span>.</pre>
+		<p>开发者试图在会话周围放置状态，并在提交数据之前跟踪用户是否成功完成验证码。
+		因为状态变量 (剧透：<span class="spoiler">passed_captcha</span>) 在客户端，它也可以被攻击者这样操纵：</p>
+		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&passed_captcha=true&Change=Change</span>。</pre>
 
 		<br />
 
 		<h3>高级别</h3>
-		<p>There has been development code left in, which was never removed in production. It is possible to mimic the development values, to allow
-			invalid values in be placed into the CAPTCHA field.</p>
-		<p>You will need to spoof your user-agent (剧透：<span class="spoiler">reCAPTCHA</span>) as well as use the CAPTCHA value of
-			(剧透：<span class="spoiler">hidd3n_valu3</span>) to skip the check.</p>
+		<p>有一些开发代码被留在其中，在生产中从未被删除。有可能模仿开发值，以允许无效的值被放入验证码字段中。</p>
+		<p>你需要欺骗你的用户代理 (剧透：<span class="spoiler">reCAPTCHA</span>)，以及使用CAPTCHA的值 (剧透：<span class="spoiler">hidd3n_valu3</span>) 来跳过检查。</p>
 
 		<br />
 

@@ -1,51 +1,48 @@
 <div class="body_padded">
-	<h1>Help - Cross Site Request Forgery (CSRF)</h1>
+	<h1>帮助 - 跨站请求伪造(CSRF)</h1>
 
 	<div id="code">
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
 		<h3>简介</h3>
-		<p>CSRF is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated.
-			With a little help of social engineering (such as sending a link via email/chat), an attacker may force the users of a web application to execute actions of
-			the attacker's choosing.</p>
+		<p>CSRF是一种攻击，它迫使终端用户在他们目前已认证的网络应用程序上执行不需要的行动。
+		在社会工程的帮助下（如通过电子邮件/聊天工具发送链接），攻击者可以迫使网络应用程序的用户执行攻击者选择的行动。</p>
 
-		<p>A successful CSRF exploit can compromise end user data and operation in case of normal user. If the targeted end user is
-			the administrator account, this can compromise the entire web application.</p>
+		<p>如果是普通用户，一个成功的CSRF漏洞可以破坏终端用户的数据和操作。如果目标终端用户是管理员账户，这可能会危及整个网络应用。</p>
 
-		<p>This attack may also be called "XSRF", similar to "Cross Site scripting (XSS)", and they are often used together.</p>
+		<p>这种攻击也可被称为 “XSRF”，类似于 “跨站脚本（XSS）”，它们经常被一起使用。</p>
 
 		<br /><hr /><br />
 
 		<h3>目标</h3>
-		<p>Your task is to make the current user change their own password, without them knowing about their actions, using a CSRF attack.</p>
+		<p>使用CSRF攻击使当前用户改变自己的密码，而他们并不知道自己的行为。</p>
 
 		<br /><hr /><br />
 
 		<h3>低安全级别</h3>
-		<p>There are no measures in place to protect against this attack. This means a link can be crafted to achieve a certain action (in this case, change the current users password).
-			Then with some basic social engineering, have the target click the link (or just visit a certain page), to trigger the action.</p>
+		<p>目前没有任何措施来防止这种攻击。这意味着可以制作一个链接来实现某种行动（在这种情况下，改变当前用户的密码）。
+		然后通过一些基本的社会工程，让目标点击该链接（或只是访问某个页面）触发该行动。</p>
 		<pre>剧透：<span class="spoiler">?password_new=password&password_conf=password&Change=Change</span>.</pre>
 
 		<br />
 
 		<h3>中安全级别</h3>
-		<p>For the medium level challenge, there is a check to see where the last requested page came from. The developer believes if it matches the current domain,
-			it must of come from the web application so it can be trusted.</p>
-		<p>It may be required to link in multiple vulnerabilities to exploit this vector, such as reflective XSS.</p>
+		<p>对于中安全级别的挑战，有一个检查，看看最后请求的页面来自哪里。开发者认为，如果它与当前的域相匹配，它一定是来自网络应用程序，所以它可以被信任。</p>
+		<p>可能需要链接多个漏洞来利用这个载体，如反射性XSS</p>
 
 		<br />
 
 		<h3>高安全级别</h3>
-		<p>In the high level, the developer has added an "anti Cross-Site Request Forgery (CSRF) token". In order by bypass this protection method, another vulnerability will be required.</p>
-		<pre>剧透：<span class="spoiler">e.g. Javascript is a executed on the client side, in the browser</span>.</pre>
+		<p>在高安全级别，开发者添加了一个 "反跨站请求伪造（CSRF）令牌"。为了绕过这种保护方法，将需要另一个漏洞。</p>
+		<pre>剧透：<span class="spoiler">例如，Javascript是在客户端执行的，在浏览器中。</span>.</pre>
 
-		<h4>Bonus Challenge</h4>
-		<p>At this level, the site will also accept a change password request as a JSON object in the following format:</p>
+		<h4>奖励挑战</h4>
+		<p>在这一级别，网站也会接受以下列格式的JSON对象的更改密码请求。</p>
 		<pre><code>{"password_new":"a","password_conf":"a","Change":1}</code></pre>
-		<p>When done this way, the CSRF token must be passed as a header named <code>user-token</code>.</p>
+		<p>当这样做的时候，CSRF令牌必须作为一个名为 <code>user-token</code> 的header来传递。。</p>
 
-		<p>Here is a sample request:</p>
+		<p>下面是一个示例请求：</p>
 		<pre><code><span class="spoiler">POST /vulnerabilities/csrf/ HTTP/1.1
 Host: dvwa.test
 Content-Length: 51
@@ -58,7 +55,7 @@ user-token: 026d0caed93471b507ed460ebddbd096
 		<br />
 
 		<h3>不可能级别</h3>
-		<p>At this level, the site requires the user to give their current password as well as the new password. As the attacker does not know this, the site is protected against CSRF style attacks.</p>
+		<p>在这一级别，网站要求用户提供他们的当前密码和新密码。由于攻击者不知道这一点，该网站可以防止CSRF式攻击。</p>
 	</div></td>
 	</tr>
 	</table>

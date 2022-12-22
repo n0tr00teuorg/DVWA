@@ -21,14 +21,14 @@
 
 		<br /><hr /><br />
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>The SQL query uses RAW input that is directly controlled by the attacker. All they need to-do is escape the query and then they are able
 			to execute any SQL query they wish.</p>
 		<pre>剧透：<span class="spoiler">?id=a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>.</pre>
 
 		<br />
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>The medium level uses a form of SQL injection protection, with the function of
 			"<?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.mysql-real-escape-string.php', 'mysql_real_escape_string()' ); ?>".
 			However due to the SQL query not having quotes around the parameter, this will not fully protect the query from being altered.</p>
@@ -38,7 +38,7 @@
 
 		<br />
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>This is very similar to the low level, however this time the attacker is inputting the value in a different manner.
 			The input values are being transferred to the vulnerable query via session variables using another page, rather than a direct GET request.</p>
 		<pre>剧透：<span class="spoiler">ID: a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>.</pre>

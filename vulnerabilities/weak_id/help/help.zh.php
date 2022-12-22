@@ -15,13 +15,13 @@
 
 		<p><hr /></p>
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>The cookie value should be very obviously predictable.</p>
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>The value looks a little more random than on low but if you collect a few you should start to see a pattern.</p>
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>First work out what format the value is in and then try to work out what is being used as the input to generate the values.</p>
 		<p>Extra flags are also being added to the cookie, this does not affect the challenge but highlights extra protections that can be added to protect the cookies.</p>
 

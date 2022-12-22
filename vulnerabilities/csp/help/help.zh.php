@@ -16,19 +16,19 @@
 
 		<br /><hr /><br />
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>检查策略，找到所有可用于托管外部脚本文件的来源。</p>
 		<pre>剧透：<span class="spoiler">脚本可以从Pastebin或Toptal（以前是Hastebin）中包含，尝试在那里存储一些JavaScript，然后将其加载进去。</span></pre>
 
 		<br />
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>CSP策略试图使用nonce来防止攻击者添加内联脚本。</p>
 		<pre>剧透：<span class="spoiler">检查nonce，看看它是如何变化（或不变化）的。</span></pre>
 
 		<br />
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>页面对source/jsonp.php进行JSONP调用，传递回调函数的名称，你需要修改jsonp.php脚本来改变回调函数。</p>
 		<pre>剧透：<span class="spoiler">页面上的JavaScript将执行页面返回的任何内容，将此改为你自己的代码并执行该代码。</span></pre>
 

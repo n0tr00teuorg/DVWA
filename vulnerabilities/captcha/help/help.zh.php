@@ -20,23 +20,23 @@
 
 		<br /><hr /><br />
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>这个验证码的问题是，它很容易被绕过。开发者假设所有的用户都会通过第一个页面输入验证码，然后进入下一个用于更新密码的页面。
 		通过直接向更改页面提交新密码，用户可以绕过验证码系统。</p>
 
-		<p>在低级别下，完成这一挑战所需的参数将类似于以下内容：</p>
+		<p>在低安全级别下，完成这一挑战所需的参数将类似于以下内容：</p>
 		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&Change=Change</span>。</pre>
 
 		<br />
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>开发者试图在会话周围放置状态，并在提交数据之前跟踪用户是否成功完成验证码。
 		因为状态变量 (剧透：<span class="spoiler">passed_captcha</span>) 在客户端，它也可以被攻击者这样操纵：</p>
 		<pre>剧透：<span class="spoiler">?step=2&password_new=password&password_conf=password&passed_captcha=true&Change=Change</span>。</pre>
 
 		<br />
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>有一些开发代码被留在其中，在生产中从未被删除。有可能模仿开发值，以允许无效的值被放入验证码字段中。</p>
 		<p>你需要欺骗你的用户代理 (剧透：<span class="spoiler">reCAPTCHA</span>)，
 		以及使用CAPTCHA的值 (剧透：<span class="spoiler">hidd3n_valu3</span>) 来跳过检查。</p>
@@ -45,7 +45,7 @@
 
 		<h3>不可能级别</h3>
 		<p>在不可能级别，开发者已经阻断了所有的攻击途径。这个过程已经被简化，所以数据和验证码在一个单一的步骤中验证。
-		另外，开发者还将状态变量移到服务器端（来自中级别），这样用户就无法改变它。</p>
+		另外，开发者还将状态变量移到服务器端（来自中安全级别），这样用户就无法改变它。</p>
 	</div></td>
 	</tr>
 	</table>

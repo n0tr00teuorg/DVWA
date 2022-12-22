@@ -22,21 +22,21 @@
 
 		<br /><hr /><br />
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>There are no measures in place to protect against this attack. This means a link can be crafted to achieve a certain action (in this case, change the current users password).
 			Then with some basic social engineering, have the target click the link (or just visit a certain page), to trigger the action.</p>
 		<pre>剧透：<span class="spoiler">?password_new=password&password_conf=password&Change=Change</span>.</pre>
 
 		<br />
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>For the medium level challenge, there is a check to see where the last requested page came from. The developer believes if it matches the current domain,
 			it must of come from the web application so it can be trusted.</p>
 		<p>It may be required to link in multiple vulnerabilities to exploit this vector, such as reflective XSS.</p>
 
 		<br />
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>In the high level, the developer has added an "anti Cross-Site Request Forgery (CSRF) token". In order by bypass this protection method, another vulnerability will be required.</p>
 		<pre>剧透：<span class="spoiler">e.g. Javascript is a executed on the client side, in the browser</span>.</pre>
 

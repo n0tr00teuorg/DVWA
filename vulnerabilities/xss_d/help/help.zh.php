@@ -24,20 +24,20 @@
 
 		<p><hr /></p>
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>Low level will not check the requested input, before including it to be used in the output text.</p>
 		<pre>剧透：<span class="spoiler"><?=htmlentities ("/vulnerabilities/xss_d/?default=English<script>alert(1)</script>")?></span>.</pre>
 
 		<p><br /></p>
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>The developer has tried to add a simple pattern matching to remove any references to "&lt;script" to disable any JavaScript. Find a way to run JavaScript without using the script tags.</p>
 		<pre>剧透：<span class="spoiler">You must first break out of the select block then you can add an image with an onerror event:<br />
 <?=htmlentities ("/vulnerabilities/xss_d/?default=English>/option></select><img src='x' onerror='alert(1)'>");?></span>.</pre>
 
 		<p><br /></p>
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>The developer is now white listing only the allowed languages, you must find a way to run your code without it going to the server.</p>
 		<pre>剧透：<span class="spoiler">The fragment section of a URL (anything after the # symbol) does not get sent to the server and so cannot be blocked. The bad JavaScript being used to render the page reads the content from it when creating the page.<br />
 <?=htmlentities ("/vulnerabilities/xss_d/?default=English#<script>alert(1)</script>")?></span>.</pre>

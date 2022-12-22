@@ -23,19 +23,19 @@
 
 		<br /><hr /><br />
 
-		<h3>低级别</h3>
+		<h3>低安全级别</h3>
 		<p>Low level will not check the requested input, before including it to be used in the output text.</p>
 		<pre>剧透：<span class="spoiler">Either name or message field: &lt;script&gt;alert("XSS");&lt;/script&gt;</span>.</pre>
 
 		<br />
 
-		<h3>中级别</h3>
+		<h3>中安全级别</h3>
 		<p>The developer had added some protection, however hasn't done every field the same way.</p>
 		<pre>剧透：<span class="spoiler">name field: &lt;sCriPt&gt;alert("XSS");&lt;/sCriPt&gt;</span>.</pre>
 
 		<br />
 
-		<h3>高级别</h3>
+		<h3>高安全级别</h3>
 		<p>The developer believe they have disabled all script usage by removing the pattern "&lt;s*c*r*i*p*t".</p>
 		<pre>剧透：<span class="spoiler">HTML events</span>.</pre>
 

@@ -38,13 +38,14 @@
 
 		<h3>高级别</h3>
 		<p>有一些开发代码被留在其中，在生产中从未被删除。有可能模仿开发值，以允许无效的值被放入验证码字段中。</p>
-		<p>你需要欺骗你的用户代理 (剧透：<span class="spoiler">reCAPTCHA</span>)，以及使用CAPTCHA的值 (剧透：<span class="spoiler">hidd3n_valu3</span>) 来跳过检查。</p>
+		<p>你需要欺骗你的用户代理 (剧透：<span class="spoiler">reCAPTCHA</span>)，
+		以及使用CAPTCHA的值 (剧透：<span class="spoiler">hidd3n_valu3</span>) 来跳过检查。</p>
 
 		<br />
 
 		<h3>不可能级别</h3>
-		<p>In the impossible level, the developer has removed all avenues of attack. The process has been simplified so that data and CAPTCHA verification occurs in one
-			single step. Alternatively, the developer could have moved the state variable server side (from the medium level), so the user cannot alter it.</p>
+		<p>在不可能级别，开发者已经阻断了所有的攻击途径。这个过程已经被简化，所以数据和验证码在一个单一的步骤中验证。
+		另外，开发者还将状态变量移到服务器端（来自中级别），这样用户就无法改变它。</p>
 	</div></td>
 	</tr>
 	</table>

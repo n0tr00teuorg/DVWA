@@ -1,53 +1,50 @@
 <div class="body_padded">
-	<h1>Help - SQL Injection</h1>
+	<h1>帮助--SQL注入</h1>
 
 	<div id="code">
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
 		<h3>简介</h3>
-		<p>A SQL injection attack consists of insertion or "injection" of a SQL query via the input data from the client to the application.
-			A successful SQL injection exploit can read sensitive data from the database, modify database data (insert/update/delete), execute administration operations on the database
-			(such as shutdown the DBMS), recover the content of a given file present on the DBMS file system (load_file) and in some cases issue commands to the operating system.</p>
+		<p>SQL注入攻击包括通过从客户端到应用程序的输入数据插入或 “注入” 一个SQL查询。
+			一个成功的SQL注入漏洞可以从数据库中读取敏感数据，修改数据库数据（插入/更新/删除），在数据库上执行管理操作（如关闭DBMS），恢复DBMS文件系统上存在的特定文件的内容（load_file），并在某些情况下向操作系统发布命令。</p>
 
-		<p>SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.</p>
+		<p>SQL注入攻击是一种注入式攻击，在这种攻击中，SQL命令被注入数据平面输入，以实现预定义SQL命令的执行。</p>
 
-		<p>This attack may also be called "SQLi".</p>
+		<p>这种攻击也可能被称为 “SQLi”。</p>
 
 		<br /><hr /><br />
 
 		<h3>目标</h3>
-		<p>There are 5 users in the database, with id's from 1 to 5. Your mission... to steal their passwords via SQLi.</p>
+		<p>数据库里有5个用户，ID从1到5。你的任务是......通过SQLi窃取他们的密码。</p>
 
 		<br /><hr /><br />
 
 		<h3>低安全级别</h3>
-		<p>The SQL query uses RAW input that is directly controlled by the attacker. All they need to-do is escape the query and then they are able
-			to execute any SQL query they wish.</p>
-		<pre>剧透：<span class="spoiler">?id=a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>.</pre>
+		<p>该SQL查询使用由攻击者直接控制的RAW输入。他们所需要做的就是转义查询，然后他们就能执行他们希望的任何SQL查询。</p>
+		<pre>剧透：<span class="spoiler">?id=a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>。</pre>
 
 		<br />
 
 		<h3>中安全级别</h3>
-		<p>The medium level uses a form of SQL injection protection, with the function of
-			"<?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.mysql-real-escape-string.php', 'mysql_real_escape_string()' ); ?>".
-			However due to the SQL query not having quotes around the parameter, this will not fully protect the query from being altered.</p>
+		<p>中安全级别使用一种SQL注入保护，其功能是
+			“<?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/zh/function.mysql-real-escape-string.php', 'mysql_real_escape_string()' ); ?>”。
+			然而，由于SQL查询的参数周围没有引号，这并不能完全保护查询不被更改。</p>
 
-		<p>The text box has been replaced with a pre-defined dropdown list and uses POST to submit the form.</p>
-		<pre>剧透：<span class="spoiler">?id=a UNION SELECT 1,2;-- -&Submit=Submit</span>.</pre>
+		<p>文本框已被替换为一个预定义的下拉列表，并使用POST提交表单。</p>
+		<pre>剧透：<span class="spoiler">?id=a UNION SELECT 1,2;-- -&Submit=Submit</span>。</pre>
 
 		<br />
 
 		<h3>高安全级别</h3>
-		<p>This is very similar to the low level, however this time the attacker is inputting the value in a different manner.
-			The input values are being transferred to the vulnerable query via session variables using another page, rather than a direct GET request.</p>
-		<pre>剧透：<span class="spoiler">ID: a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>.</pre>
+		<p>这与低级别的非常相似，然而这一次攻击者是以不同的方式输入数值的。
+			输入值是通过会话变量使用另一个页面转移到脆弱的查询，而不是直接的GET请求。</p>
+		<pre>剧透：<span class="spoiler">ID: a' UNION SELECT "text1","text2";-- -&Submit=Submit</span>。</pre>
 
 		<br />
 
 		<h3>不可能级别</h3>
-		<p>The queries are now parameterized queries (rather than being dynamic). This means the query has been defined by the developer,
-			and has distinguish which sections are code, and the rest is data.</p>
+		<p>现在的查询是参数化的查询（而不是动态的）。这意味着查询是由开发者定义的，并区分了哪些部分是代码，其余部分是数据。</p>
 	</div></td>
 	</tr>
 	</table>

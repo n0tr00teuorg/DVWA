@@ -1,55 +1,52 @@
 <div class="body_padded">
-	<h1>Help - Command Injection</h1>
+	<h1>帮助 - 命令注入</h1>
 
 	<div id="code">
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
 		<h3>简介</h3>
-		<p>The purpose of the command injection attack is to inject and execute commands specified by the attacker in the vulnerable application.
-			In situation like this, the application, which executes unwanted system commands, is like a pseudo system shell, and the attacker may use it
-			as any authorized system user. However, commands are executed with the same privileges and environment as the web service has.</p>
+		<p>命令注入攻击的目的是在脆弱的应用程序中注入和执行攻击者指定的命令。
+			在这样的情况下，执行不需要的系统命令的应用程序，就像一个伪系统外壳，攻击者可以作为任何授权的系统用户使用它。然而，命令的执行具有与网络服务相同的权限和环境。</p>
 
-		<p>Command injection attacks are possible in most cases because of lack of correct input data validation, which can be manipulated by the attacker
-			(forms, cookies, HTTP headers etc.).</p>
+		<p>由于缺乏正确的输入数据验证，在大多数情况下，命令注入攻击是可能的，这可以被攻击者所操纵 (表单, cookies, HTTP头 等)。</p>
 
-		<p>The syntax and commands may differ between the Operating Systems (OS), such as Linux and Windows, depending on their desired actions.</p>
+		<p>语法和命令在操作系统（OS）之间可能有所不同，如Linux和Windows，这取决于它们所需的行动。</p>
 
-		<p>This attack may also be called "Remote Command Execution (RCE)".</p>
+		<p>这种攻击也可能被称为 “远程命令执行（RCE）”。</p>
 
 		<br /><hr /><br />
 
 		<h3>目标</h3>
-		<p>Remotely, find out the user of the web service on the OS, as well as the machines hostname via RCE.</p>
+		<p>通过远程命令执行，远程找出操作系统上网络服务的用户，以及机器的主机名。</p>
 
 		<br /><hr /><br />
 
 		<h3>低安全级别</h3>
-		<p>This allows for direct input into one of <u>many PHP functions</u> that will execute commands on the OS. It is possible to escape out of the designed command and
-			executed unintentional actions.</p>
-		<p>This can be done by adding on to the request, "once the command has executed successfully, run this command".
-		<pre>剧透：<span class="spoiler">To add a command "&&"</span>. Example: <span class="spoiler">127.0.0.1 && dir</span>.</pre>
+		<p>这允许直接输入一个或 <u>多个PHP功能</u>中，在操作系统上执行命令。有可能逃出所设计的命令并执行无意的行动。</p>
+		<p>这可以通过在请求中加入 “一旦命令成功执行，请运行此命令 ”来实现。
+		<pre>剧透：<span class="spoiler">要添加 “&&”</span>。 例如： <span class="spoiler">127.0.0.1 && dir</span>。</pre>
 
 		<br />
 
 		<h3>中安全级别</h3>
-		<p>The developer has read up on some of the issues with command injection, and placed in various pattern patching to filter the input. However, this isn't enough.</p>
-		<p>Various other system syntaxes can be used to break out of the desired command.</p>
-		<pre>剧透：<span class="spoiler">e.g. background the ping command</span>.</pre>
+		<p>开发者已经阅读了一些关于命令注入的问题，并放置了各种模式补丁来过滤输入。然而，这还不够。</p>
+		<p>其他各种系统语法可以用来突破所需的命令。</p>
+		<pre>剧透：<span class="spoiler">例如，后端是ping命令</span>。</pre>
 
 		<br />
 
 		<h3>高安全级别</h3>
-		<p>In the high level, the developer goes back to the drawing board and puts in even more pattern to match. But even this isn't enough.</p>
-		<p>The developer has either made a slight typo with the filters and believes a certain PHP command will save them from this mistake.</p>
-		<pre>剧透：<span class="spoiler"><?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/en/function.trim.php', 'trim()' ); ?>
-			removes all leading & trailing spaces, right?</span>.</pre>
+		<p>在高安全级别中，开发人员回到绘图板上，放入更多的模式来匹配。但即使这样也是不够的。</p>
+		<p>开发者要么是在过滤器上犯了一个小小的错误，并认为某条PHP命令可以把他们从这个错误中解救出来。</p>
+		<pre>剧透：<span class="spoiler"><?php echo dvwaExternalLinkUrlGet( 'https://secure.php.net/manual/zh/function.trim.php', 'trim()' ); ?>
+			删除所有前导和尾部的空格，真的吗？</span></pre>
 
 		<br />
 
 		<h3>不可能级别</h3>
-		<p>In the impossible level, the challenge has been re-written, only to allow a very stricted input. If this doesn't match and doesn't produce a certain result,
-			it will not be allowed to execute. Rather than "black listing" filtering (allowing any input and removing unwanted), this uses "white listing" (only allow certain values).</p>
+		<p>在不可能级别中，挑战被重新编写，只允许一个非常严格的输入。如果这不符合要求，没有产生某种结果，
+			将不被允许执行。这不是 "黑名单 "过滤（允许任何输入并删除不需要的），而是使用 "白名单"（只允许某些值）。</p>
 	</div></td>
 	</tr>
 	</table>
